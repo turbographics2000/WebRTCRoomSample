@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <title>Document</title>
+    <link rel="stylesheet" href="test.css">
+</head>
+
+<body>
+    <div id="header">
+        <select id="webcamSelect" style="display:none"></select>
+    </div>
+    <div class="user-list-container">
+        <div id="userListHeader">
+            <div>ユーザーリスト</div>
+        </div>
+        <div id="userList"></div>
+    </div>
+    <div id="roomListContainer">
+        <div id="roomListHeader">
+            <div>ルームリスト</div>
+        </div>
+        <div id="roomList"></div>
+    </div>
+    <div id="roomPanel" style="display: none">
+        <div id="roomHeader">
+            <h2 id="roomTitle"></h2>
+        </div>
+        <div id="roomContainer">
+            <div class="room-member">
+                <video id="myStreamView" class="member-video"></video>
+                <div class="member-name">My</div>
+            </div>
+            <!-- <div class="room-member">
+                <video src="mov_bbb.mp4"></video>
+                <div class="member-name">My</div>
+            </div> -->
+        </div>
+        <div class="room-control-panel-container">
+            <div class="room-control-panel">
+                <div id="camSwitchButton" class="material-icons room-control-button">videocam</div>
+                <div id="micSwitchButton" class="material-icons  room-control-button">mic</div>
+                <div id="leaveButton" class="material-icons room-control-button">call_end</div>
+            </div>
+        </div>
+    </div>
+    <dialog id="roomNameDialog">
+        <p>ルーム名を入力してください</p>
+        <input type="text" id="roomName">
+        <button id="roomNameDialogClose">Enter</button>
+    </dialog>
+    <script type="module" src="test.js"></script>
+</body>
+
+</html>
